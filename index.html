@@ -13,42 +13,52 @@
         <div id="toogle_container">
             <button id="toogle_countries" onclick=toogle_function()>Show random countries</button>
         </div>
-        <div id="api_countries">
-            <div id="random_countries"></div>
+        <div class="shadow">
+            <div id="api_countries">
+                <div id="random_countries"></div>
+            </div>
+            <div id="api_all">
+                <input type="text" id="country_name" placeholder="Indiquez un pays">
+                <button onclick=fetch_api()>ok</button>
+            </div>
+            <div id="result"></div>
         </div>
-        <div id="api_all">
-            <input type="text" id="country_name" placeholder="Indiquez un pays">
-            <button onclick=fetch_api()>ok</button>
-        </div>
-        <div id="result"></div>
     </div>
     <div id="input_functions">
-        <p class="consigne">Écrivez une phrase et choissisez une valeur, une lettre du mot sera tirée au sort et remplacée par la valeur</p>
-        <div class="function_container">
-            <div id="replace_input">
-                <input type="text" id="replace_sentence" placeholder="Indiquez une phrase" class="margin">
-                <input type="text" id="replace_letter" placeholder="Indiquez une lettre" class="margin">
-                <button onclick=replace() class="margin">Valider</button>
+        <div class="shadow">
+            <p class="consigne">Écrivez une phrase et choissisez une valeur, une lettre du mot sera tirée au sort et remplacée par la valeur</p>
+            <div class="function_container">
+                <div id="replace_input">
+                    <input type="text" id="replace_sentence" placeholder="Indiquez une phrase" class="margin">
+                    <input type="text" id="replace_letter" placeholder="Indiquez une lettre" class="margin">
+                    <button onclick=replace() class="margin">Valider</button>
+                </div>
             </div>
+            <div class="consigne" id="replace_result"></div>
         </div>
-        <div class="consigne" id="replace_result"></div>
-        <p class="consigne">Écrivez une phrase, celle-ci sera traduite en binaire</p>
-        <div class="function_container">
-            <input type="text" id="binary" placeholder="Indiquez une phrase" class="mr">
-            <button onclick=translate_binary()>ok</button>
+        <div class="shadow">
+            <p class="consigne">Écrivez une phrase, celle-ci sera traduite en binaire</p>
+            <div class="function_container">
+                <input type="text" id="binary" placeholder="Indiquez une phrase" class="mr">
+                <button onclick=translate_binary()>ok</button>
+            </div>
+            <div class="consigne" id="binary_result"></div>
         </div>
-        <div class="consigne" id="binary_result"></div>
-        <p class="consigne">Tirez un chiffre en sort en zéro et la valeur saisie</p>
-        <div class="function_container">
-            <input type="number" class="mr" id="math_random" placeholder="Indiquez un chiffre">
-            <button onclick=math_random()>Valider</button>
+        <div class="shadow">
+            <p class="consigne">Tirez un chiffre en sort en zéro et la valeur saisie</p>
+            <div class="function_container">
+                <input type="number" class="mr" id="math_random" placeholder="Indiquez un chiffre">
+                <button onclick=math_random()>Valider</button>
+            </div>
+            <div class="consigne" id="math_result"></div>
         </div>
-        <div class="consigne" id="math_result"></div>
-        <div class="function_container">
-            <input type="number" placeholder="Indiquez un chiffre" id="stairs">
-            <button onclick=stairs()>Valider</button>
+        <div class="shadow">
+            <div class="function_container">
+                <input type="number" placeholder="Indiquez un chiffre" id="stairs" class="mr">
+                <button onclick=stairs()>Valider</button>
+            </div>
+            <div class="consigne" id="stair_result"></div>
         </div>
-        <div class="consigne" id="stair_result"></div>
     </div>
 </body>
 <script src="index.js"></script>

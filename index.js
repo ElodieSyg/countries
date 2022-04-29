@@ -61,7 +61,7 @@ math_value.addEventListener("input", e => {
 
 stair_input.addEventListener("input", e => {
     stairValue = e.target.value
-})
+});
 
 /* Functions for rest countries project */
 const fetch_api = async () => {
@@ -133,6 +133,7 @@ const play_audio = () => {
 /* Replace random letter in sentence function */
 const replace = () => {
     play_audio().play();
+    if (!replaceSentence) alert("Merci d'indiquer des valeurs !")
 
     let random = Math.floor(Math.random() * replaceSentence.length);
 
@@ -146,6 +147,7 @@ const replace = () => {
 /* Translate sentence in binary function */
 const translate_binary = () => {
     play_audio().play();
+    if (!binarySentence) alert("Merci d'indiquer une valeur !")
 
     let value = "";
 
@@ -161,6 +163,7 @@ const translate_binary = () => {
 /* Pick a random number */
 const math_random = () => {
     play_audio().play();
+    if (!mathValue) alert("Merci d'indiquer une valeur !")
 
     let random = Math.floor(Math.random() * mathValue);
 
@@ -172,6 +175,7 @@ const math_random = () => {
 /* Input * */
 const stairs = () => {
     let temp = "";
+    if (!stairValue) alert("Merci d'indiquer une valeur !")
 
     for (let i = 0; i < stairValue; i++) {
         temp += "*";

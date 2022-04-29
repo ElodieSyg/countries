@@ -80,6 +80,13 @@ input {
     width: 30%;
 }
 
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 30px;
+}    
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
     #random_countries {
